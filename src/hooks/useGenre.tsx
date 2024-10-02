@@ -4,11 +4,11 @@ export interface Genre {
   id: number;
   name: string;
   slug: string;
-  background_image: string;
+  image_background: string;
 }
 
-function useGenre() {
-  return useData<Genre>("/games");
+function useGenres() {
+  return useData<Genre>("/genres");
 }
 
-export default useGenre;
+export default useGenres;
