@@ -3,6 +3,7 @@ import useGames from "../hooks/useGames";
 import { Games } from "../hooks/useGames";
 import PlatFormIconList from "./PlatFormIconList";
 import CriticScore from "./CriticScore";
+import getCropImages from "../services/image-url";
 
 interface Prop {
   game: Games;
@@ -12,7 +13,7 @@ function GameCard({ game }: Prop) {
   return (
     <>
       <Card borderRadius={10} overflow="hidden">
-        <Image src={game.background_image} />
+        <Image src={getCropImages(game.background_image)} />
         <CardBody>
           <Heading fontSize="2xl">{game.name}</Heading>
           <HStack justifyContent="space-between">
