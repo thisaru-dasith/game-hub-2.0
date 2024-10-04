@@ -21,8 +21,10 @@ function GenresList({ onSelectedGenre }: Prop) {
                 src={getCropImages(genre.image_background)}
               ></Image>
               <Button
-                fontSize="10px"
+                fontSize="20px"
                 variant={"link"}
+                whiteSpace="normal"
+                textAlign="left"
                 onClick={() => onSelectedGenre(genre)}
               >
                 {genre.name}
